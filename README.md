@@ -12,14 +12,14 @@ Aplikacja umożliwia połączenie z wcześniej zapisanym kontaktem i rozmowę g�
 Żeby uruchomić aplikację należy:
 
 1. Uruchomić serwer z bazą kontaktów:
-  1.1. Pobrać folder "TIP_address"
-  1.2. Wejść do głównego folderu za pomocą konsoli.
-  1.3. Uruchomić komendę 'python manage.py migrate'
-  1.4. Uruchomić komendę 'python manage.py runserver'
+  1.1. Pobrać folder "TIP_address"  
+  1.2. Wejść do głównego folderu za pomocą konsoli.  
+  1.3. Uruchomić komendę 'python manage.py migrate'  
+  1.4. Uruchomić komendę 'python manage.py runserver'  
   
 2. Uruchomić aplikację właściwą:
-  2.1. Pobrać folder "TIP_JoinMe"
-  2.2. Uruchomić komendę 'python <ścieżka do pliku "start_app.py">
+  2.1. Pobrać folder "TIP_JoinMe"  
+  2.2. Uruchomić komendę 'python <ścieżka do pliku "start_app.py">  
 
 # Obsługa i działanie:
 
