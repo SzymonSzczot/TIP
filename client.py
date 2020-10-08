@@ -7,7 +7,6 @@ import pyaudio
 import requests
 
 import constants
-import user_constants
 from constants import audio_format, chunk_size, channels, rate, bcolors
 
 
@@ -44,26 +43,29 @@ class Client:
             print("Couldn't connect to server")
 
     def establish_connection(self):
-        ip, target_ip = self.translate_name_to_ip()
+        ip = self.translate_name_to_ip()
         if ip:
-            answer = self.handshake(target_ip)
-            if answer == constants.ACCEPTED:
-                self.variables.client_status.set("Client connected to " + target_ip)
-                return True
-            else:
-                return False
+            return self.connect(ip)
         else:
-            self.variables.server_status.set(user_constants.COULDNT_FIND_CONTACT)
+            return self.try_connecting_to_given_ip()
+
+    def connect(self, target_ip):
+        answer = self.handshake(target_ip)
+        if answer == constants.ACCEPTED:
+            self.variables.client_status.set("Client connected to " + target_ip)
+            return True
+        else:
             return False
 
-    def translate_name_to_ip(self):
-        target_ip = self.variables.ip.get()
+    def try_connecting_to_given_ip(self):
+        return self.connect(self.variables.ip.get())
 
+    def translate_name_to_ip(self):
         response = requests.get("http://localhost:8000/contact", params={"ip": self.variables.ip.get()})
         response = json.loads(response.content)
         ip = response.get("ip")
 
-        return ip, target_ip
+        return ip
 
     def handshake(self, target_ip):
         target_port = int(self.variables.destinated_port.get())
@@ -77,16 +79,8 @@ class Client:
 
         print(bcolors.OKBLUE + "Connection established" + bcolors.ENDC)
 
-        # start threads
         self.receive_thread.start()
         self.send_thread.start()
-
-    def disconnect_client(self):
-        self.client_socket.send(constants.CLOSE)
-        self.client_socket.close()
-        self.receive_thread.join()
-        self.send_thread.join()
-        print(bcolors.FAIL + "Client disconnected" + bcolors.ENDC)
 
     def receive_server_data(self):
         while not self.stop_threads:
@@ -104,3 +98,11 @@ class Client:
         data = self.recording_stream.read(20000)
         self.client_socket.send(data)
         time.sleep(0.01)
+
+    def disconnect_client(self):
+        self.client_socket.send(constants.CLOSE)
+        self.client_socket.close()
+        self.client_socket = None
+        self.receive_thread.join()
+        self.send_thread.join()
+        print(bcolors.FAIL + "Client disconnected" + bcolors.ENDC)

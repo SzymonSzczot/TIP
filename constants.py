@@ -7,7 +7,6 @@ ACCEPTED = b"accepted"
 CLOSE = b'closing'
 ACCEPT = b'accepted'
 DECLINE = b'no'
-TAKEN = b'wait'
 
 
 class bcolors:

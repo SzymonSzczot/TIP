@@ -13,8 +13,8 @@ class Gui:
 
     def __init__(self):
         self.root = Tk()
-        self.server = Server()
-        self.client = Client()
+        self.server = None
+        self.client = None
 
         self.server_thread = None
         self.client_thread = None
@@ -23,9 +23,11 @@ class Gui:
         self.variables = GuiVariables()
 
     def run_server(self):
+        self.server = Server()
         self.server.start_server()
 
     def run_client(self):
+        self.client = Client()
         self.client.start_client()
 
     def server_start(self):
@@ -35,8 +37,11 @@ class Gui:
         self.client_thread = threading.Thread(target=self.run_client).start()
 
     def disconnect(self):
-        self.server.disconnect_server()
-        self.client.disconnect_client()
+        if self.server:
+            self.server.disconnect_server()
+        if self.client:
+            self.client.disconnect_client()
+            self.client = None
 
     def add_contact(self):
         ip = self.variables.ip.get()
