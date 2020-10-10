@@ -49,7 +49,7 @@ class GuiVariables(metaclass=Singleton):
         self.destinated_port.set("6000")
         self.connected_to.set("Not connected")
         self.server_status.set("Server Stopped")
-        self.client_status.set("Client Stopped                                            ")
+        self.client_status.set("Client Stopped")
         self.port.set("")
 
 

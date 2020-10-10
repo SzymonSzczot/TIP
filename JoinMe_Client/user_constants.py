@@ -1,1 +1,1 @@
-COULDNT_FIND_CONTACT = "Nie znaleziono takiego użytkownika. Spróbuj ponownie lub dodaj nowego"
+COULDNT_FIND_CONTACT = "Coudn't find specified user - try again or add a new one"

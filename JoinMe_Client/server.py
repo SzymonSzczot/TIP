@@ -6,9 +6,8 @@ from tkinter import ttk
 
 import pyaudio
 
-from JoinMe_Client import constants
-from JoinMe_Client.constants import bcolors, \
-    audio_format, channels, rate, chunk_size
+import constants
+from constants import bcolors, audio_format, channels, rate, chunk_size
 
 
 class Server:
@@ -61,8 +60,8 @@ class Server:
         accept_button.pack()
         decline_button = ttk.Button(self.popup, text="Decline", command=self.decline)
         decline_button.pack()
-        button_close = tk.Button(self.popup, text="Close", command=self.decline)
-        button_close.pack(fill='x')
+        # button_close = tk.Button(self.popup, text="Close", command=self.decline)
+        # button_close.pack(fill='x')
         self.popup.mainloop()
 
     def start_server(self):
@@ -85,8 +84,8 @@ class Server:
             return False
 
     def open_connections(self):
-        self.variables.server_status.set("Połączony")
-        print(bcolors.WARNING + bcolors.UNDERLINE + f"Połączono\n" + bcolors.ENDC +
+        self.variables.server_status.set("Connected")
+        print(bcolors.WARNING + bcolors.UNDERLINE + f"Connected to\n" + bcolors.ENDC +
               bcolors.BOLD + f"IP: {self.ip}\nPort: {self.port}" + bcolors.ENDC)
 
     def accept_connection(self):

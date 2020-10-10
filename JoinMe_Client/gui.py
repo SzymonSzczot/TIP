@@ -4,9 +4,9 @@ from tkinter import ttk
 
 import requests
 
-from JoinMe_Client.client import Client
-from JoinMe_Client.constants import GuiVariables
-from JoinMe_Client.server import Server
+from client import Client
+from constants import GuiVariables
+from server import Server
 
 
 class Gui:
@@ -88,11 +88,11 @@ class Gui:
         value.grid(column=1, row=3, columnspan=4, sticky=(N, W, E, S))
 
         # BUTTON START SERVER
-        edit_button = ttk.Button(self.root, text='Start server', command=self.server_start)
+        edit_button = ttk.Button(self.root, text='Join network', command=self.server_start)
         edit_button.grid(column=1, row=4, sticky=(N, W, E, S), padx=10)
 
         # BUTTON START CLIENT
-        save_button = ttk.Button(self.root, text='Start connection', command=self.client_start)
+        save_button = ttk.Button(self.root, text='Connect', command=self.client_start)
         save_button.grid(column=1, row=5, sticky=(N, W, E, S), padx=10)
 
         send_button = ttk.Button(self.root, text='Add contact', command=self.add_contact)
