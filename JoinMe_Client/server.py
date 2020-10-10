@@ -1,4 +1,3 @@
-import multiprocessing
 import socket
 import threading
 import time
@@ -7,8 +6,8 @@ from tkinter import ttk
 
 import pyaudio
 
-import constants
-from constants import bcolors, \
+from JoinMe_Client import constants
+from JoinMe_Client.constants import bcolors, \
     audio_format, channels, rate, chunk_size
 
 

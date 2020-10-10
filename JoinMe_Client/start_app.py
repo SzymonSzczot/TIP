@@ -1,4 +1,4 @@
-from gui import Gui
+from JoinMe_Client.gui import Gui
 
 if __name__ == "__main__":
     gui = Gui()

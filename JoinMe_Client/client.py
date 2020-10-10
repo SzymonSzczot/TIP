@@ -6,8 +6,8 @@ import time
 import pyaudio
 import requests
 
-import constants
-from constants import audio_format, chunk_size, channels, rate, bcolors
+from JoinMe_Client import constants
+from JoinMe_Client.constants import audio_format, chunk_size, channels, rate, bcolors
 
 
 class Client:

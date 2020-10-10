@@ -4,9 +4,9 @@ from tkinter import ttk
 
 import requests
 
-from client import Client
-from constants import GuiVariables
-from server import Server
+from JoinMe_Client.client import Client
+from JoinMe_Client.constants import GuiVariables
+from JoinMe_Client.server import Server
 
 
 class Gui:
