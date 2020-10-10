@@ -12,9 +12,15 @@ Aplikacja umożliwia połączenie z wcześniej zapisanym kontaktem i rozmowę g�
 
 Dokumentację można obejrzeć [tutaj](https://github.com/SzymonSzczot/TIP/blob/master/TIP_Szczot_Wasilewski_dokumentacja.pdf)
 
+## Prezentacja działania
+
+[![](http://img.youtube.com/vi/BuInwu4UmT0/0.jpg)](http://www.youtube.com/watch?v=BuInwu4UmT0 "")
+
 ## Uruchomienie
 
 Żeby uruchomić aplikację należy:
+
+0. Zainstalować Python w wersji przynajmniej 3.7.2
 
 1. Uruchomić serwer z bazą kontaktów (jeżeli chcemy wykonać połączenie):  
   - Pobierz pliki serwerowe `JoinMe_Server.zip` z Releases
