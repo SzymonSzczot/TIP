@@ -51,7 +51,7 @@ class Gui:
     def gui(self):
         ip_label = ttk.Label(self.root, text="IP")
         ip_label.grid(column=0, row=2)
-        port_label = ttk.Label(self.root, text="PORT")
+        port_label = ttk.Label(self.root, text="CLIENT NAME")
         port_label.grid(column=0, row=1)
         dst_port_label = ttk.Label(self.root, text="DESTINATED PORT")
         dst_port_label.grid(column=0, row=3)
