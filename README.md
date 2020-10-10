@@ -17,13 +17,13 @@ Dokumentację można obejrzeć [tutaj](https://github.com/SzymonSzczot/TIP/blob/
 Żeby uruchomić aplikację należy:
 
 1. Uruchomić serwer z bazą kontaktów (jeżeli chcemy wykonać połączenie):  
-  1.1. Pobierz pliki serwerowe `JoinMe_Server.zip` z Releases
-  1.2. Wypakuj pliki w dogodnym (najlepiej pustym) folderze
-  1.3. Uruchom skrypt `start_db.bat`
+  - Pobierz pliki serwerowe `JoinMe_Server.zip` z Releases
+  - Wypakuj pliki w dogodnym (najlepiej pustym) folderze
+  - Uruchom skrypt `start_db.bat`
   
 2. Uruchomić aplikację właściwą:  
-  2.1. Pobierz aplikację kliencką `JoinMe_Client.exe` z Releases
-  2.2. Uruchom aplikację
+  - Pobierz aplikację kliencką `JoinMe_Client.exe` z Releases
+  - Uruchom aplikację
 
 ## Obsługa aplikacji klienckiej:
 
