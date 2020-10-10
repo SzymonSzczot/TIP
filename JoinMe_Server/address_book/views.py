@@ -3,7 +3,7 @@ import re
 from django.http import JsonResponse
 from django.views import View
 
-from JoinMe_Server.address_book.models import Contact
+from address_book.models import Contact
 
 
 class IP(View):

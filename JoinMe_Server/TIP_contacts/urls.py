@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from JoinMe_Server.address_book.views import IP, AddContact
+from address_book.views import IP, AddContact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
