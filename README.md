@@ -12,17 +12,21 @@ Aplikacja umożliwia połączenie z wcześniej zapisanym kontaktem i rozmowę g�
 
 TO_BE_ADDED
 
+## Prezentacja działania
+
+TO_BE_ADDED
+
 ## Uruchomienie
 
 Żeby uruchomić aplikację należy:
 
 1. (opcjonalnie) Uruchomić serwer z bazą kontaktów:  
-  1.1. Pobierz pliki serwerowe z Releases (`JoinMe_Server.zip`)
+  1.1. Pobierz pliki serwerowe `JoinMe_Server.zip` z Releases
   1.2. Wypakuj pliki w dogodnym (najlepiej pustym) folderze
   1.3. Uruchom skrypt `start_db.bat`
   
 2. Uruchomić aplikację właściwą:  
-  2.1. Pobierz aplikację kliencką z Releases (`JoinMe_Client.exe`)
+  2.1. Pobierz aplikację kliencką `JoinMe_Client.exe` z Releases
   2.2. Uruchom aplikację
 
 ## Obsługa aplikacji klienckiej:
